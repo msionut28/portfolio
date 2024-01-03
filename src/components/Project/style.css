@@ -1,0 +1,65 @@
+.project {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: black;
+    text-align: center;
+    padding: 0px;
+    scale:0.9;
+    transition: 0.4s ease-in-out;
+    filter: grayscale(0%);
+    box-shadow: 0 5px 5px rgba(0,0,0,0.50), 0 15px 10px rgba(0,0,0,0.16);
+    border-style: none;
+}
+
+.project:hover {
+    color: black;
+    text-align: center;
+    padding: 0px;
+    transform: scale(1.1, 1.1);
+    transition: 0.5s ease-in-out;
+    filter: grayscale(20%);
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.overlay:hover{
+    opacity:1;
+}
+
+.overlay:hover > * {
+    transform: translateY(0);
+}
+
+.title{
+    font-size: 2.5em
+}
+
+.description{
+    font-size: 1.15em;
+    margin-top: 0.2em;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}

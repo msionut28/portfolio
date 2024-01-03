@@ -1,0 +1,6 @@
+.about {
+    height: calc(100vh - 60px);
+    min-height: 700px;
+    height: 100vh;
+    margin-top: -60px;
+}

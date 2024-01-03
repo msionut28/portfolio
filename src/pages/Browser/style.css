@@ -1,0 +1,71 @@
+.safari {
+    width: 95%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.topSection {
+    /* width: 95%; */
+    height: 7vh;
+    display: flex;
+    background-color: rgba(52, 55, 59, 255);
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+}
+
+.close, .minimize, .maximize {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    border-radius: 50%;
+    width: 1.8vh;
+    height: 1.8vh;
+    border: none;
+    margin: 2vh 0.4vw
+}
+
+.close {
+    background-color: rgba(255, 95, 87, 255);
+    margin-left: 2vw;
+}
+
+.close:hover {
+    background-color: rgba(222, 94, 88, 255);
+}
+
+.minimize {
+    background-color: rgba(254, 188, 46, 255);
+}
+
+.minimize:hover {
+    background-color: rgba(226, 173, 60, 255);
+}
+
+.maximize {
+    background-color: rgba(41, 200, 64, 255);
+}
+
+.maximize:hover {
+    background-color: rgba(53, 172, 71, 255);
+}
+
+.chevrons {
+    display: flex;
+    margin-left: 3vw;
+    color: rgba(88, 91, 95, 255);
+}
+
+.chevron:hover{
+    color: rgba(179,180,181,255);
+}
+
+.search{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
