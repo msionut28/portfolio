@@ -17,8 +17,14 @@ const Browser = () => {
       text: "BattleShip Game",
       url: "https://msionut28.github.io/battleships_browserGame/",
     },
-    1: { text: "PantryChef", url: "https://pantrychef-ga.netlify.app" },
-    2: { text: "SafeHaven", url: "https://safehaven-ga.netlify.app" },
+    1: {
+      text: "PantryChef",
+      url: "https://pantrychef-ga.netlify.app",
+    },
+    2: {
+      text: "SafeHaven",
+      url: "https://safehaven-ga.netlify.app",
+    },
     3: {
       text: "SquadSprint",
       url: "https://squadsprintfe-production.up.railway.app",
