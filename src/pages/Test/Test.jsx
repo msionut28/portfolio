@@ -1,90 +1,68 @@
-import React, { useRef, useState } from "react";
-import "./style.css";
-import { projects } from "../../data/content";
+import { useState, useRef } from "react";
+import { motion } from "framer-motion";
 import Project from "../../components/Project/Project";
-import { ArrowRight } from "react-feather";
-import { ArrowLeft } from "react-feather";
+import { projects } from "../../data/content";
+import "./style.css";
 
-function Test() {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [leftButton, setLeftButton] = useState(false);
-  const [rightButton, setRightButton] = useState(true);
-
-  const containerRef = useRef();
-
-  // Function to handle scrolling when the button is clicked
-  const handleScroll = (scrollAmount) => {
-    setScrollPosition((prevScrollPosition) => {
-      const newScrollPosition = prevScrollPosition + scrollAmount;
-
-      containerRef.current.scrollLeft = newScrollPosition;
-
-      // Update the state of leftButton based on scroll position
-      setLeftButton(newScrollPosition > 0);
-      setRightButton(newScrollPosition < 1680);
-      return newScrollPosition;
-    });
-  };
+const Test = () => {
+  const [scrollPos, setScrollPos] = useState()
 
   return (
-    <div className="container">
-      <div
-        ref={containerRef}
-        style={{
-          width: "100vw",
-          overflowX: "scroll",
-          scrollBehavior: "smooth",
-        }}
+    <div className="test">
+      <motion.div
+        className="box"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1, y: -200, x: 0 }}
+        transition={{ duration: 0.75 }}
       >
-        <div className="content-box">
-          <div className="item">
-            <Project
-              title={projects.bs.title}
-              shortDesc={projects.bs.shortDesc}
-              image={projects.bs.image}
-            />
-          </div>
-          <div className="item">
-            <Project
-              title={projects.pc.title}
-              shortDesc={projects.pc.shortDesc}
-              image={projects.pc.image}
-            />
-          </div>
-          <div className="item">
-            <Project
-              title={projects.sh.title}
-              shortDesc={projects.sh.shortDesc}
-              image={projects.sh.image}
-            />
-          </div>
-          <div className="item">
-            <Project
-              title={projects.sp.title}
-              shortDesc={projects.sp.shortDesc}
-              image={projects.sp.image}
-            />
-          </div>
-        </div>
+        <Project
+          title={projects.bs.title}
+          shortDesc={projects.bs.shortDesc}
+          image={projects.bs.image}
+        />
+      </motion.div>
+      <motion.div
+        className="box"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1, y: -200, x: 50 }}
+        transition={{ duration: 0.75, delay: 0.25 }}
+      >
+        <Project
+          title={projects.pc.title}
+          shortDesc={projects.pc.shortDesc}
+          image={projects.pc.image}
+        />
+      </motion.div>
+      <motion.div
+        className="box"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1, y: -200, x: 100 }}
+        transition={{ duration: 0.75, delay: 0.5 }}
+      >
+        <Project
+          title={projects.sh.title}
+          shortDesc={projects.sh.shortDesc}
+          image={projects.sh.image}
+        />
+      </motion.div>
+      <motion.div
+        className="box"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1, y: -200, x: 150 }}
+        transition={{ duration: 0.75, delay: 0.75 }}
+      >
+        <Project
+          title={projects.sp.title}
+          shortDesc={projects.sp.shortDesc}
+          image={projects.sp.image}
+        />
+      </motion.div>
+      <div className="scrollBtns">
+        <button>LEFT</button>
+        <button>RIGHT</button>
       </div>
-
-      <div className="action-btns">
-        {leftButton && (
-          <button onClick={() => handleScroll(-560)}>
-            <ArrowLeft />
-          </button>
-        )}
-        {rightButton && (
-          <button onClick={() => handleScroll(560)}>
-            <ArrowRight />
-          </button>
-        )}
-      </div>
-      {/* <iframe src="https://pantrychef-ga.netlify.app/" title="my first project"
-      width={800}
-      height={600}></iframe> */}
     </div>
   );
-}
+};
 
 export default Test;

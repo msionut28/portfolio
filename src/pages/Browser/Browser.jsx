@@ -87,7 +87,7 @@ const Browser = () => {
       <div className="website">
         <iframe
           src={selectedTabSettings[selectedTab]?.url || ""}
-          title="my first project"
+          title="my project"
           width="100%"
           height="100%"
         />
