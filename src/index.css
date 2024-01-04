@@ -57,10 +57,19 @@ h6 {
   src: url('../public/fonts/montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'helvetica';
+  src: url('../public/fonts/helvetica_neue/helvetica-neue.otf') format('opentype');
+}
+
 .bebas {
   font-family: 'bebasneue', sans-serif;
 }
 
 .montserrat {
   font-family: 'montserrat', sans-serif;
+}
+
+.helvetica {
+  font-family: 'helvetica', sans-serif;
 }
