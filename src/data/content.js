@@ -34,24 +34,32 @@ const projects = {
     shortDesc:
       "A browser-based game developed during the course of one week, having been coding for only 2 weeks prior.",
     image: "/projects/battleship.png",
+    live: "https://msionut28.github.io/battleships_browserGame/",
+    git: "https://github.com/msionut28/battleships_browserGame"
   },
   pc: {
     title: "PantryChef - Blog",
     shortDesc:
       "MEVN Full-Stack App that generates custom recipes and fetches an external API for random recipes.",
     image: "/projects/pantrychef.png",
+    live: "https://pantrychef-ga.netlify.app/",
+    git: "https://github.com/msionut28/pantryChef_frontend"
   },
   sh: {
     title: "SafeHaven - Venue Reviewer & Chat",
     shortDesc:
       "Next.js and Express web app aiming to create an inclusive space for LGBTQ+ community through reviewing venues.",
     image: "/projects/safehaven.png",
+    live: "https://safehaven-ga.netlify.app/",
+    git: "https://github.com/msionut28/safeHaven"
   },
   sp: {
     title: "SquadSprint - Task Manager",
     shortDesc:
       "SquadSprint is a CRUD Web App using Django and Next.js that is meant to help groups of people in managing tasks together.",
     image: "/projects/squadsprint.png",
+    live: "https://squadsprintfe-production.up.railway.app/",
+    git: "https://github.com/msionut28/squadsprint_fe"
   },
 };
 

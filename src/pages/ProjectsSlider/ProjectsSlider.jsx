@@ -1,11 +1,12 @@
-import React, { useRef, useState } from "react";
-import "./style.css";
-import { projects } from "../../data/content";
-import Project from "../../components/Project/Project";
+import { useRef, useState } from "react";
+import { motion } from "framer-motion";
 import { ArrowRight } from "react-feather";
 import { ArrowLeft } from "react-feather";
+import { projects } from "../../data/content";
+import Project from "../../components/Project/Project";
+import "./style.css";
 
-function ProjectsSlider() {
+const ProjectsSlider = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [leftButton, setLeftButton] = useState(false);
   const [rightButton, setRightButton] = useState(true);
@@ -13,15 +14,36 @@ function ProjectsSlider() {
   const containerRef = useRef();
 
   const handleScroll = (scrollAmount) => {
-    setScrollPosition((prevScrollPosition) => {
-      const newScrollPosition = prevScrollPosition + scrollAmount;
+    const newScrollPosition = scrollPosition + scrollAmount;
 
-      containerRef.current.scrollLeft = newScrollPosition;
-
-      setLeftButton(newScrollPosition > 0);
-      setRightButton(newScrollPosition < 1680);
-      return newScrollPosition;
+    containerRef.current.scrollTo({
+      left: newScrollPosition,
+      behavior: "smooth",
     });
+
+    setScrollPosition(newScrollPosition);
+    setLeftButton(newScrollPosition > 0);
+    setRightButton(newScrollPosition < calculateMaxScroll());
+  };
+
+  const calculateMaxScroll = () => {
+    const totalProjects = Object.keys(projects).length;
+    const viewportWidth = window.innerWidth;
+    const projectWidthPercentage = 30;
+
+    const projectWidth = (viewportWidth * projectWidthPercentage) / 100;
+
+    return (totalProjects - 1) * projectWidth;
+  };
+
+  const calculateOneScroll = () => {
+    const totalProjects = Object.keys(projects).length;
+    const viewportWidth = window.innerWidth;
+    const gapPercentage = viewportWidth * 0.23;
+
+    const projectWidth = viewportWidth / totalProjects + gapPercentage;
+
+    return projectWidth;
   };
 
   return (
@@ -34,52 +56,43 @@ function ProjectsSlider() {
           scrollBehavior: "smooth",
         }}
       >
-        <div className="content-box">
-          <div className="item">
-            <Project
-              title={projects.bs.title}
-              shortDesc={projects.bs.shortDesc}
-              image={projects.bs.image}
-            />
-          </div>
-          <div className="item">
-            <Project
-              title={projects.pc.title}
-              shortDesc={projects.pc.shortDesc}
-              image={projects.pc.image}
-            />
-          </div>
-          <div className="item">
-            <Project
-              title={projects.sh.title}
-              shortDesc={projects.sh.shortDesc}
-              image={projects.sh.image}
-            />
-          </div>
-          <div className="item">
-            <Project
-              title={projects.sp.title}
-              shortDesc={projects.sp.shortDesc}
-              image={projects.sp.image}
-            />
-          </div>
-        </div>
+        <motion.div
+          className="content-box"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+        >
+          {Object.keys(projects).map((key) => {
+            const project = projects[key];
+            return (
+              <div className="item" key={key}>
+                <Project
+                  title={project.title}
+                  shortDesc={project.shortDesc}
+                  image={project.image}
+                  web={project.live}
+                  git={project.git}
+                />
+              </div>
+            );
+          })}
+        </motion.div>
       </div>
 
       <div className="action-btns">
         {leftButton && (
-          <button onClick={() => handleScroll(-560)}>
+          <button onClick={() => handleScroll(-calculateOneScroll())}>
             <ArrowLeft />
           </button>
         )}
         {rightButton && (
-          <button onClick={() => handleScroll(560)}>
+          <button onClick={() => handleScroll(calculateOneScroll())}>
             <ArrowRight />
           </button>
         )}
       </div>
     </div>
   );
-}
+};
 
 export default ProjectsSlider;
