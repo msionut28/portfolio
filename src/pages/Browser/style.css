@@ -4,15 +4,16 @@
     display: flex;
     flex-direction: column;
     margin: 2vh auto;
-    border: 0.1px solid rgba(76,77,78,255);
+    border: 0.1px solid rgba(76, 77, 78, 255);
     border-radius: 8px;
-    
+
 }
 
-.top-bar {
+/* MENU BAR */
+
+.menu-bar {
     display: flex;
     align-items: center;
-    /* gap: 1vw; */
     justify-content: space-between;
     width: 100%;
     background-color: rgba(52, 55, 59, 0.75);
@@ -55,13 +56,15 @@
     cursor: default;
 }
 
-.time { 
+.time {
     font-size: 0.85em;
     font-weight: 600;
- }
+}
+
+
+/* BROWSER TOP SECTION */
 
 .top-section {
-    /* width: 95%; */
     height: 7vh;
     display: flex;
     background-color: rgba(52, 55, 59, 255);
@@ -115,8 +118,8 @@
     color: rgba(88, 91, 95, 255);
 }
 
-.chevron:hover{
-    color: rgba(179,180,181,255);
+.chevron:hover {
+    color: rgba(179, 180, 181, 255);
 }
 
 .search {
@@ -124,11 +127,12 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    border: 1px solid rgba(76,77,78,255);
+    border: 1px solid rgba(76, 77, 78, 255);
     border-radius: 8px;
     color: white;
     width: 61vw;
 }
+
 .search-bar {
     display: flex;
     align-items: center;
@@ -140,22 +144,21 @@
 .search-input {
     font-size: 0.8em;
     cursor: default;
-    color: rgba(225,225,225,255);
+    color: rgba(225, 225, 225, 255);
 }
 
 .search-input:hover {
-    color: rgba(255,255,255,255);
+    color: rgba(255, 255, 255, 255);
 }
 
-.refresh {  
+.refresh {
     float: right;
     margin: auto 1vh;
-    /* margin-right: 1vw; */
-    color: rgba(225,225,225,255);
+    color: rgba(225, 225, 225, 255);
 }
 
 .refresh:hover {
-    color: rgba(255,255,255,255);
+    color: rgba(255, 255, 255, 255);
 }
 
 .right-hand-symbols {
@@ -169,12 +172,12 @@
 }
 
 .share:hover, .plus:hover, .layers:hover {
-    color: rgba(179,180,181,255)
+    color: rgba(179, 180, 181, 255)
 }
-
+/* TAB SECTION */
 .tabs {
     display: grid;
-    grid-template-columns: repeat(4, 1fr) ;
+    grid-template-columns: repeat(4, 1fr);
     background-color: black;
     height: 4vh;
 }
@@ -183,8 +186,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(29,30,30,255);
-    border-right: 1px solid rgba(68,69,70,255);
+    background-color: rgba(29, 30, 30, 255);
+    border-right: 1px solid rgba(68, 69, 70, 255);
     border-top: 1px solid black;
     color: white;
     cursor: default;
@@ -196,6 +199,8 @@
     border-bottom: 2px solid black;
     border-top: none;
 }
+
+/* ACTUAL WEBSITE RENDERING */
 
 .website {
     width: 100%;

@@ -64,7 +64,7 @@ const Browser = () => {
   }, []);
   return (
     <div className="safari">
-      <div className="top-bar">
+      <div className="menu-bar">
         <div className="left">
           <span className="apple-sign"></span>
           <span className="app">Safari</span>
