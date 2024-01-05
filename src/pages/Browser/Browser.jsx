@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   ChevronLeft,
   ChevronRight,
@@ -7,11 +7,31 @@ import {
   Share,
   Plus,
   Layers,
+  Globe,
+  Wifi,
+  Battery,
+  Search,
+  Monitor,
 } from "react-feather";
 import "./style.css";
 
 const Browser = () => {
   const [selectedTab, setSelectedTab] = useState(1);
+  const [currentDateTime, setCurrentDateTime] = useState(getCurrentDateTime());
+
+  function getCurrentDateTime() {
+    const currentDate = new Date();
+    const day = currentDate.toLocaleDateString("en-GB", { weekday: "short" });
+    const date = currentDate.toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "short",
+    });
+    const time = currentDate.toLocaleTimeString("en-GB", {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    return `${day} ${date} ${time}`;
+  }
   const selectedTabSettings = {
     0: {
       text: "BattleShip Game",
@@ -34,8 +54,41 @@ const Browser = () => {
   const handleTabClick = (index) => {
     setSelectedTab(index);
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentDateTime(getCurrentDateTime());
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, []);
   return (
     <div className="safari">
+      <div className="top-bar">
+        <div className="left">
+          <span className="apple-sign"></span>
+          <span className="app">Safari</span>
+          <span className="option">File</span>
+          <span className="option">View</span>
+          <span className="option">History</span>
+          <span className="option">Bookmarks</span>
+        </div>
+        <div className="right">
+          <span>
+            <Wifi size={16} />
+          </span>
+          <span>
+            <Battery size={16} />
+          </span>
+          <span>
+            <Search size={16} />
+          </span>
+          <span>
+            <Monitor size={16} />
+          </span>
+          <span className="time">{currentDateTime}</span>
+        </div>
+      </div>
       <div className="top-section">
         <div className="buttons">
           <button className="close"></button>
@@ -80,6 +133,7 @@ const Browser = () => {
             className={`tab ${selectedTab === index ? "selected" : ""}`}
             onClick={() => handleTabClick(index)}
           >
+            <Globe size={14} style={{ marginRight: "0.5vw" }} />
             {selectedTabSettings[index].text}
           </div>
         ))}
