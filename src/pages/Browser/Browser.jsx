@@ -75,7 +75,7 @@ const Browser = () => {
       </motion.div>
       <motion.div className="safari"
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, y: -665 }}
+      animate={{ opacity: 1, y: -window.innerHeight * 0.9}}
       transition={{ duration: 1, delay: 2 }}>
         <div className="menu-bar">
           <div className="left">

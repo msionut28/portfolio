@@ -6,7 +6,7 @@ const NavBar = () => {
     return(
         <div>
             <Link to='/'>
-                <Button variant='danger'className='mx-2 bebas fs-5'>Home</Button>
+                <Button variant='danger'className='my-2 mx-2 bebas fs-5'>Home</Button>
             </Link>
             <Link to='/projects'>
                 <Button variant='warning' className='mx-2 bebas fs-5'>Projects</Button>

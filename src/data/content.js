@@ -63,4 +63,67 @@ const projects = {
   },
 };
 
-export { aboutMe, projects };
+const skills = {
+  html: {
+    name: 'HTML5',
+    img: '/skills-vectors/html.svg'
+  },
+  js: {
+    name: 'JavaScript',
+    img: '/skills-vectors/javascript.svg'
+  },
+  vuejs: {
+    name: 'Vue.js',
+    img: '/skills-vectors/vuejs.svg'
+  },
+  reactjs: {
+    name: 'React.js',
+    img: '/skills-vectors/react.svg'
+  },
+  next: {
+    name: 'Next.js',
+    img: '/skills-vectors/next.svg'
+  },
+  css: {
+    name: 'CSS',
+    img: '/skills-vectors/css.svg'
+  },
+  bootstrap: {
+    name: 'Bootstrap',
+    img: '/skills-vectors/boostrap.svg'
+  },
+  tailwind: {
+    name: 'Tailwind CSS',
+    img: '/skills-vectors/tailwind.svg'
+  },
+  node: {
+    name: 'Node.js',
+    img: '/skills-vectors/nodejs.svg'
+  },
+  express: {
+    name: 'Express.js',
+    img: '/skills-vectors/express.svg'
+  },
+  python: {
+    name: 'Python',
+    img: '/skills-vectors/python.svg'
+  },
+  django: {
+    name: 'Django',
+    img: '/skills-vectors/django.svg'
+  },
+  djangoRest: {
+    name: 'Django REST Framework',
+    img: '/skills-vectors/djangorest.svg'
+  },
+  mongodb: {
+    name: 'MongoDB',
+    img: '/skills-vectors/mongodb.svg'
+  },
+  postgresql: {
+    name: 'PostgreSQL',
+    img: '/skills-vectors/postgresql.svg'
+  }
+}
+
+export { aboutMe, projects, skills };
