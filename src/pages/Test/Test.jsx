@@ -2,14 +2,16 @@ import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import Project from "../../components/Project/Project";
 import { projects } from "../../data/content";
+import { skills } from "../../data/content";
+import Skill from "../../components/Skill/Skill";
 import "./style.css";
 
 const Test = () => {
-  const [scrollPos, setScrollPos] = useState()
+  const [scrollPos, setScrollPos] = useState();
 
   return (
     <div className="test">
-      <motion.div
+      {/* <motion.div
         className="box"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1, y: -200, x: 0 }}
@@ -60,7 +62,10 @@ const Test = () => {
       <div className="scrollBtns">
         <button>LEFT</button>
         <button>RIGHT</button>
-      </div>
+      </div> */}
+      {Object.values(skills).map((skill, index) => (
+        <Skill key={index} name={skill.name} img={skill.img} />
+      ))}
     </div>
   );
 };

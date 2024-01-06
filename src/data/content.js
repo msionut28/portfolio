@@ -90,10 +90,10 @@ const skills = {
   },
   bootstrap: {
     name: 'Bootstrap',
-    img: '/skills-vectors/boostrap.svg'
+    img: '/skills-vectors/bootstrap.svg'
   },
   tailwind: {
-    name: 'Tailwind CSS',
+    name: 'Tailwind',
     img: '/skills-vectors/tailwind.svg'
   },
   node: {

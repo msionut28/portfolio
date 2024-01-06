@@ -215,6 +215,7 @@
     color: white;
     cursor: default;
     font-family: 'helvetica', sans-serif;
+    font-size: 0.95em;
 }
 
 .selected {
