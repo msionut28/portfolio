@@ -1,12 +1,21 @@
 .test{
-    height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
     gap: 1vw;
 
     .box{
         width: 25vw;
         height: 30vh;
     }
+}
+
+.skills {
+    margin: auto;
+    height: 10%;
+    width: 20%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1vw
 }

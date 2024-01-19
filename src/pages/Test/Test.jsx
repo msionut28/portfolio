@@ -63,9 +63,11 @@ const Test = () => {
         <button>LEFT</button>
         <button>RIGHT</button>
       </div> */}
+      <div className="skills">
       {Object.values(skills).map((skill, index) => (
         <Skill key={index} name={skill.name} img={skill.img} />
       ))}
+      </div>
     </div>
   );
 };
