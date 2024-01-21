@@ -113,7 +113,7 @@ const skills = {
     img: '/skills-vectors/django.svg'
   },
   djangoRest: {
-    name: 'Django REST Framework',
+    name: 'Django REST',
     img: '/skills-vectors/djangorest.svg'
   },
   mongodb: {
