@@ -65,6 +65,7 @@ const Browser = () => {
   }, []);
   return (
     <div className="browser">
+      <h1 className="montserrat title">Safari Clone</h1>
       <motion.div
         className="start-up"
         initial={{ opacity: 1, zIndex: 9999 }}
