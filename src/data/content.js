@@ -123,6 +123,10 @@ const skills = {
   postgresql: {
     name: 'PostgreSQL',
     img: '/skills-vectors/postgresql.svg'
+  },
+  postman: {
+    name: 'Postman',
+    img: '/skills-vectors/postman.svg'
   }
 }
 
