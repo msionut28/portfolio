@@ -64,8 +64,19 @@ const Browser = () => {
     return () => clearInterval(intervalId);
   }, []);
   return (
-    <div className="browser">
-      <h1 className="montserrat title">Safari Clone</h1>
+    <motion.div
+      className="browser"
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1 }}
+    >
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <h1 className="montserrat title">SAFARI CLONE</h1>
+      </motion.div>
       <motion.div
         className="start-up"
         initial={{ opacity: 1, zIndex: 9999 }}
@@ -169,7 +180,7 @@ const Browser = () => {
           />
         </div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

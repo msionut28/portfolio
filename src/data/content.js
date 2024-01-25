@@ -28,6 +28,11 @@ const aboutMe = {
   },
 };
 
+const contactInfo= {
+  github: 'https://github.com/msionut28/',
+  linkedin: 'https://linkedin.com/'
+}
+
 const projects = {
   bs: {
     title: "BATTLESHIP GAME",
@@ -187,4 +192,4 @@ const skillsAssessment = {
   },
 };
 
-export { aboutMe, projects, skills, skillsAssessment };
+export { aboutMe, projects, skills, skillsAssessment, contactInfo };

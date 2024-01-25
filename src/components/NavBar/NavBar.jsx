@@ -16,7 +16,7 @@ const NavBar = () => {
         <Link to="/browser" style={{ textDecoration: "none" }}>
           <span className="bebas link-btn">BROWSER</span>
         </Link>
-        <Link to="/test" style={{ textDecoration: "none" }}>
+        <Link to="/skills" style={{ textDecoration: "none" }}>
           <span className="bebas link-btn">SKILLS</span>
         </Link>
       </div>

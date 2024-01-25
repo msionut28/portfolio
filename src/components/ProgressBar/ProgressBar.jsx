@@ -10,6 +10,8 @@ const ProgressBar = (props) => {
   };
 
   const progressBar = {
+    display: "flex",
+    alignItems: "center",
     height: "100%",
     width: `${percentage}%`,
     backgroundColor: "rgba(255, 255, 255, 1)",
@@ -19,7 +21,6 @@ const ProgressBar = (props) => {
 
   const fullBar = {
     display: "flex",
-    alignItems: "center",
     height: 20,
     width: "30vw",
     backgroundColor: "rgba(255, 255, 255, 0.15)",
@@ -37,7 +38,7 @@ const ProgressBar = (props) => {
   };
   return (
     <div style={wrapper}>
-      <div style={fullBar}>
+      <div style={fullBar} className="fullbar">
         <div style={progressBar}>
           <span style={progress}>{`${percentage}%`}</span>
         </div>

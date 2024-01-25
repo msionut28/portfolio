@@ -18,7 +18,7 @@
     transform: scale(1.1, 1.1);
     transition: 0.5s ease-in-out;
     filter: grayscale(20%);
-    box-shadow: 0 0 22px 5px rgba(191, 191, 191, 1);
+    box-shadow: 0 0 22px 5px rgba(115, 115, 115, 0.5);
 }
 
 .overlay {

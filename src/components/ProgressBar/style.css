@@ -11,3 +11,11 @@
     color: white;
     font-weight: bold;
 }
+
+.fullbar {
+    transition: 0.3s ease-in-out;
+}
+
+.fullbar:hover {
+    transform: scale(1.1);
+}

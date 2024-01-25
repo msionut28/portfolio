@@ -48,7 +48,13 @@ const ProjectsSlider = () => {
 
   return (
     <div className="container">
-      <h1 className="montserrat title">Projects</h1>
+            <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <h1 className="montserrat title">PROJECTS</h1>
+      </motion.div>
       <div
         ref={containerRef}
         style={{

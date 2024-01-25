@@ -4,15 +4,21 @@ import Skill from "../../components/Skill/Skill";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import "./style.css";
 
-const Test = () => {
+const Skills = () => {
   return (
     <div className="test">
-      <h1 className="montserrat title"> Skills & Technologies </h1>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <h1 className="montserrat title"> SKILLS </h1>
+      </motion.div>
       <motion.div
         className="skills-wrapper"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1, delay: 0.25 }}
       >
         <div className="skills">
           {Object.values(skills).map((skill, index) => (
@@ -72,4 +78,4 @@ const Test = () => {
   );
 };
 
-export default Test;
+export default Skills;

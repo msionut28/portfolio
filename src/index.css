@@ -12,7 +12,9 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+  /* background: rgb(23, 36, 28); */
+  /* background: rgb(27, 30, 21); */
+  background: rgb(22, 22, 22);
   color: white;
 }
 
