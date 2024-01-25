@@ -1,0 +1,38 @@
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.link-btn {
+    margin: auto;
+    width: 50%;
+}
+
+.link-btn {
+    position: relative;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 0.5vw;
+    font-size: 1.25em;
+}
+
+.link-btn::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    content: '';
+    background-color: #FFFFFF;
+    transform-origin: bottom;
+    transition: transform 0.3s ease-out;
+    transform: scaleX(0);
+}
+
+.link-btn:hover::after {
+    transform: scaleX(1);
+}
+
+.link-btn:last-child {
+    margin-right: 0;
+}

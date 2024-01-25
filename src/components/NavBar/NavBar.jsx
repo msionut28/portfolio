@@ -1,24 +1,16 @@
-import Button from 'react-bootstrap/Button'
-import { Link } from 'react-router-dom'
-import './style.css'
+import "./style.css";
 
 const NavBar = () => {
-    return(
-        <div>
-            <Link to='/'>
-                <Button variant='danger'className='my-2 mx-2 bebas fs-5'>Home</Button>
-            </Link>
-            <Link to='/projects'>
-                <Button variant='warning' className='mx-2 bebas fs-5'>Projects</Button>
-            </Link>
-            <Link to='/test'>
-                <Button variant='warning' className='mx-2 bebas fs-5'>Test</Button>
-            </Link>
-            <Link to='/browser'>
-                <Button variant='warning' className='mx-2 bebas fs-5'>Browser</Button>
-            </Link>
-        </div> 
-    )
-}
+  return (
+    <div className="navbar">
+      <div className="link-btns">
+        <a className="bebas link-btn" href="#top">HOME</a>
+        <a className="bebas link-btn" href="#projects">PROJECTS</a>
+        <a className="bebas link-btn" href="#test">TEST</a>
+        <a className="bebas link-btn" href="#browser">BROWSER</a>
+      </div>
+    </div>
+  );
+};
 
-export default NavBar
+export default NavBar;

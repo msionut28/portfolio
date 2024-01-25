@@ -48,7 +48,7 @@ const ProjectsSlider = () => {
 
   return (
     <div className="container">
-      <h1 className="montserrat">Projects</h1>
+      <h1 className="montserrat title">Projects</h1>
       <div
         ref={containerRef}
         style={{
