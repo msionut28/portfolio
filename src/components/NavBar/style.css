@@ -3,6 +3,12 @@
     width: 100%;
     justify-content: flex-end;
 }
+
+.link-btns {
+    margin-left: auto;
+    margin-right: 2vw;
+}
+
 .link-btn {
     margin: auto;
     width: 50%;
@@ -12,8 +18,9 @@
     position: relative;
     color: #FFFFFF;
     text-decoration: none;
-    margin: 0 0.5vw;
+    margin: 0 1vw;
     font-size: 1.25em;
+    cursor: default;
 }
 
 .link-btn::after {
@@ -35,4 +42,4 @@
 
 .link-btn:last-child {
     margin-right: 0;
-}
+} 

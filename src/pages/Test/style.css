@@ -17,5 +17,24 @@
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(8, 1fr);
-    gap: 1.5vw
+    gap: 1.5vw;
+    margin-bottom: 5vw;
+}
+
+.top-skills, .bottom-skills {
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    justify-content: center;
+    /* margin-left: 5vw; */
+}
+
+.skill-assess { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.15em;
+    width: 100vw;
+    gap: 3vw;
 }

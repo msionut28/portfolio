@@ -32,10 +32,10 @@ const projects = {
   bs: {
     title: "BATTLESHIP GAME",
     shortDesc:
-      "A browser-based game developed during the course of one week, having been coding for only 2 weeks prior.",
+      "A browser-based game developed during the course of one week, using vanilla JavaScript and CSS, having been coding for only 2 weeks prior.",
     image: "/projects/battleship.png",
     live: "https://msionut28.github.io/battleships_browserGame/",
-    git: "https://github.com/msionut28/battleships_browserGame"
+    git: "https://github.com/msionut28/battleships_browserGame",
   },
   pc: {
     title: "PantryChef - Blog",
@@ -43,7 +43,7 @@ const projects = {
       "MEVN Full-Stack App that generates custom recipes and fetches an external API for random recipes.",
     image: "/projects/pantrychef.png",
     live: "https://pantrychef-ga.netlify.app/",
-    git: "https://github.com/msionut28/pantryChef_frontend"
+    git: "https://github.com/msionut28/pantryChef_frontend",
   },
   sh: {
     title: "SafeHaven - Venue Reviewer & Chat",
@@ -51,7 +51,7 @@ const projects = {
       "Next.js and Express web app aiming to create an inclusive space for LGBTQ+ community through reviewing venues.",
     image: "/projects/safehaven.png",
     live: "https://safehaven-ga.netlify.app/",
-    git: "https://github.com/msionut28/safeHaven"
+    git: "https://github.com/msionut28/safeHaven",
   },
   sp: {
     title: "SquadSprint - Task Manager",
@@ -59,75 +59,132 @@ const projects = {
       "SquadSprint is a CRUD Web App using Django and Next.js that is meant to help groups of people in managing tasks together.",
     image: "/projects/squadsprint.png",
     live: "https://squadsprintfe-production.up.railway.app/",
-    git: "https://github.com/msionut28/squadsprint_fe"
+    git: "https://github.com/msionut28/squadsprint_fe",
   },
 };
 
 const skills = {
   html: {
-    name: 'HTML5',
-    img: '/skills-vectors/html.svg'
+    name: "HTML5",
+    img: "/skills-vectors/html.svg",
   },
   js: {
-    name: 'JavaScript',
-    img: '/skills-vectors/javascript.svg'
+    name: "JavaScript",
+    img: "/skills-vectors/javascript.svg",
   },
   vuejs: {
-    name: 'Vue.js',
-    img: '/skills-vectors/vuejs.svg'
+    name: "Vue.js",
+    img: "/skills-vectors/vuejs.svg",
   },
   reactjs: {
-    name: 'React.js',
-    img: '/skills-vectors/react.svg'
+    name: "React.js",
+    img: "/skills-vectors/react.svg",
   },
   next: {
-    name: 'Next.js',
-    img: '/skills-vectors/next.svg'
+    name: "Next.js",
+    img: "/skills-vectors/next.svg",
   },
   css: {
-    name: 'CSS',
-    img: '/skills-vectors/css.svg'
+    name: "CSS",
+    img: "/skills-vectors/css.svg",
   },
   bootstrap: {
-    name: 'Bootstrap',
-    img: '/skills-vectors/bootstrap.svg'
+    name: "Bootstrap",
+    img: "/skills-vectors/bootstrap.svg",
   },
   tailwind: {
-    name: 'Tailwind',
-    img: '/skills-vectors/tailwind.svg'
+    name: "Tailwind",
+    img: "/skills-vectors/tailwind.svg",
   },
   node: {
-    name: 'Node.js',
-    img: '/skills-vectors/nodejs.svg'
+    name: "Node.js",
+    img: "/skills-vectors/nodejs.svg",
   },
   express: {
-    name: 'Express.js',
-    img: '/skills-vectors/express.svg'
+    name: "Express.js",
+    img: "/skills-vectors/express.svg",
   },
   python: {
-    name: 'Python',
-    img: '/skills-vectors/python.svg'
+    name: "Python",
+    img: "/skills-vectors/python.svg",
   },
   django: {
-    name: 'Django',
-    img: '/skills-vectors/django.svg'
+    name: "Django",
+    img: "/skills-vectors/django.svg",
   },
   djangoRest: {
-    name: 'Django REST',
-    img: '/skills-vectors/djangorest.svg'
+    name: "Django REST",
+    img: "/skills-vectors/djangorest.svg",
   },
   mongodb: {
-    name: 'MongoDB',
-    img: '/skills-vectors/mongodb.svg'
+    name: "MongoDB",
+    img: "/skills-vectors/mongodb.svg",
   },
   postgresql: {
-    name: 'PostgreSQL',
-    img: '/skills-vectors/postgresql.svg'
+    name: "PostgreSQL",
+    img: "/skills-vectors/postgresql.svg",
   },
   postman: {
-    name: 'Postman',
-    img: '/skills-vectors/postman.svg'
+    name: "Postman",
+    img: "/skills-vectors/postman.svg",
+  },
+};
+
+const skillsAssessment = {
+  top5: {
+    react: {
+      delay: 0.75,
+      name: "React.js",
+      percentage: 95
+    },
+    express: {
+      delay: 1,
+      name: "Express.js",
+      percentage: 85
+    },
+    next: {
+      delay: 1.25,
+      name: "Next.js",
+      percentage: 90
+    },
+    css: {
+      delay: 1.5,
+      name: "CSS",
+      percentage: 75
+    },
+    mongodb: {
+      delay: 1.75,
+      name: "MongoDB",
+      percentage: 80
+    }
+  },
+  bottom5: {
+    django: {
+      delay: 2.25,
+      name: "Django",
+      percentage: 55
+    },
+    python: {
+      delay: 2.5,
+      name: "Python",
+      percentage: 65
+    },
+    djangorest: {
+      delay: 2.75,
+      name: "Django REST",
+      percentage: 50
+    },
+    vuejs: {
+      delay: 3,
+      name: "Vue.js",
+      percentage: 70
+    },
+    postgresql: {
+      delay: 3.25,
+      name: "PostgreSQL",
+      percentage: 65
+    }
   }
 }
 
-export { aboutMe, projects, skills };
+export { aboutMe, projects, skills, skillsAssessment };

@@ -1,24 +1,25 @@
-import TopSection from "../TopSection/TopSection";
-import Browser from "../Browser/Browser";
-import ProjectsSlider from "../ProjectsSlider/ProjectsSlider";
-import Test from "../Test/Test";
+import Typewriter from "typewriter-effect";
+import { aboutMe } from "../../data/content";
 import "./style.css";
 
 const HomePage = () => {
   return (
     <div id="top">
-      <div className="one">
-        <TopSection/>
-      </div>
-      <div id="projects">
-        <ProjectsSlider/>
-      </div>
-      <div id="browser">
-        <Browser/>
-      </div>
-      <div id="test">
-        <Test />
-      </div>
+      <h5 className="bebas">
+        <Typewriter
+          options={{
+            strings: [
+              aboutMe.english.typewriter.first,
+              aboutMe.english.typewriter.second,
+              aboutMe.english.typewriter.third,
+            ],
+            autoStart: true,
+            loop: true,
+            deleteSpeed: 10,
+            delay: 25,
+          }}
+        />
+      </h5>
     </div>
   );
 };
