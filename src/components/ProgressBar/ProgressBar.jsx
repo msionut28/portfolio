@@ -5,9 +5,9 @@ const ProgressBar = (props) => {
 
   const wrapper = {
     display: "flex",
-    marginLeft: '2vw',
-    textAlign: 'left'
-  }
+    marginLeft: "2vw",
+    textAlign: "left",
+  };
 
   const progressBar = {
     height: "100%",
@@ -42,7 +42,12 @@ const ProgressBar = (props) => {
           <span style={progress}>{`${percentage}%`}</span>
         </div>
       </div>
-      <span className="montserrat" style={{ fontWeight: '600', cursor: 'default'}}>{name}</span>
+      <span
+        className="montserrat"
+        style={{ fontWeight: "600", cursor: "default" }}
+      >
+        {name}
+      </span>
     </div>
   );
 };

@@ -74,10 +74,12 @@ const Browser = () => {
       >
         <span className="start-logo"></span>
       </motion.div>
-      <motion.div className="safari"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, y: -window.innerHeight * 1.1}}
-      transition={{ duration: 1, delay: 2 }}>
+      <motion.div
+        className="safari"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, y: -window.innerHeight * 1.1 }}
+        transition={{ duration: 1, delay: 2 }}
+      >
         <div className="menu-bar">
           <div className="left">
             <span className="apple-sign"></span>

@@ -38,6 +38,7 @@
     color: white;
     font-size: 14em;
 }
+
 /* MENU BAR */
 
 .menu-bar {
@@ -200,6 +201,7 @@
 .share:hover, .plus:hover, .layers:hover {
     color: rgba(179, 180, 181, 255)
 }
+
 /* TAB SECTION */
 .tabs {
     display: grid;

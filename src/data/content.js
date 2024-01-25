@@ -135,56 +135,56 @@ const skillsAssessment = {
     react: {
       delay: 0.75,
       name: "React.js",
-      percentage: 95
+      percentage: 95,
     },
     express: {
       delay: 1,
       name: "Express.js",
-      percentage: 85
+      percentage: 85,
     },
     next: {
       delay: 1.25,
       name: "Next.js",
-      percentage: 90
+      percentage: 90,
     },
     css: {
       delay: 1.5,
       name: "CSS",
-      percentage: 75
+      percentage: 75,
     },
     mongodb: {
       delay: 1.75,
       name: "MongoDB",
-      percentage: 80
-    }
+      percentage: 80,
+    },
   },
   bottom5: {
     django: {
       delay: 2.25,
       name: "Django",
-      percentage: 55
+      percentage: 55,
     },
     python: {
       delay: 2.5,
       name: "Python",
-      percentage: 65
+      percentage: 65,
     },
     djangorest: {
       delay: 2.75,
       name: "Django REST",
-      percentage: 50
+      percentage: 50,
     },
     vuejs: {
       delay: 3,
       name: "Vue.js",
-      percentage: 70
+      percentage: 70,
     },
     postgresql: {
       delay: 3.25,
       name: "PostgreSQL",
-      percentage: 65
-    }
-  }
-}
+      percentage: 65,
+    },
+  },
+};
 
 export { aboutMe, projects, skills, skillsAssessment };

@@ -17,7 +17,7 @@ const Project = ({ title, shortDesc, image, git, web }) => {
           </Link>
           <a href={web} target="_blank" rel="noopener noreferrer">
             <button className="bebas customBtn">LIVE DEMO</button>
-          </a>
+          </a> 
         </div>
       </div>
     </div>

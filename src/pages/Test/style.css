@@ -1,4 +1,4 @@
-.test{
+.test {
     display: flex;
     flex-direction: column;
     gap: 5vw;
@@ -29,7 +29,7 @@
     /* margin-left: 5vw; */
 }
 
-.skill-assess { 
+.skill-assess {
     display: flex;
     justify-content: center;
     align-items: center;
