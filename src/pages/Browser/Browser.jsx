@@ -14,43 +14,13 @@ import {
   Search,
   Monitor,
 } from "react-feather";
+import { getCurrentDateTime } from "../../hooks/dateGetter";
+import { selectedTabSettings } from "../../data/content";
 import "./style.css";
 
 const Browser = () => {
   const [selectedTab, setSelectedTab] = useState(1);
   const [currentDateTime, setCurrentDateTime] = useState(getCurrentDateTime());
-
-  function getCurrentDateTime() {
-    const currentDate = new Date();
-    const day = currentDate.toLocaleDateString("en-GB", { weekday: "short" });
-    const date = currentDate.toLocaleDateString("en-GB", {
-      day: "numeric",
-      month: "short",
-    });
-    const time = currentDate.toLocaleTimeString("en-GB", {
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-    return `${day} ${date} ${time}`;
-  }
-  const selectedTabSettings = {
-    0: {
-      text: "BattleShip Game",
-      url: "https://msionut28.github.io/battleships_browserGame/",
-    },
-    1: {
-      text: "PantryChef",
-      url: "https://pantrychef-ga.netlify.app",
-    },
-    2: {
-      text: "SafeHaven",
-      url: "https://safehaven-ga.netlify.app",
-    },
-    3: {
-      text: "SquadSprint",
-      url: "https://squadsprintfe-production.up.railway.app",
-    },
-  };
 
   const handleTabClick = (index) => {
     setSelectedTab(index);
