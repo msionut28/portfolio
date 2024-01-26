@@ -1,9 +1,12 @@
 import "./style.css";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const Project = ({ title, shortDesc, image, git, web }) => {
   return (
-    <div className="project">
+    <motion.div className="project"
+    whileHover={{ scale: 1.1 }}
+    transition={{ type: "spring", stiffness: 150, damping: 12, duration: 0.4 }}>
       <img src={image} alt={title} />
       <div className="overlay">
         <div className="title bebas">{title}</div>
@@ -20,7 +23,7 @@ const Project = ({ title, shortDesc, image, git, web }) => {
           </a> 
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

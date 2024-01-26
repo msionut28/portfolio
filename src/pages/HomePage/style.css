@@ -1,11 +1,16 @@
 .homepage {
     height: 100vh;
     width: 100vw;
-} 
+}
+
+.personal-info {
+    display: flex;
+    gap: 20vw;
+}
 
 .titleAndDesc {
     margin-top: 35vh;
     margin-left: 5vw;
-    width: 35%;
+    width: 35vw;
     cursor: default;
 }
