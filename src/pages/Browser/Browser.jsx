@@ -45,7 +45,7 @@ const Browser = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="montserrat title">SAFARI CLONE</h1>
+        <h1 className="montserrat browser-title">SAFARI CLONE</h1>
       </motion.div>
       <motion.div
         className="start-up"
