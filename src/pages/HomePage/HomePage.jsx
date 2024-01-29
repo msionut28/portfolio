@@ -16,14 +16,15 @@ const HomePage = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <h3 className="bebas">Hi! I'm Stelian-Ionut Molocea</h3>
+            <h3 className="bebas full-name">Stelian-Ionut Molocea</h3>
+            <h5 className="bebas"> Jr. Full-Stack Developer </h5>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.5, y: -50 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 1 }}
           >
-            <h6 className="montserrat">
+            <h6 className="montserrat typewriter">
               <Typewriter
                 options={{
                   strings: [

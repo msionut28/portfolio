@@ -14,3 +14,12 @@
     width: 35vw;
     cursor: default;
 }
+
+.full-name {
+    margin: 0;
+}
+
+.typewriter {
+    margin-top: 3vh;
+    font-weight: 600;
+}
