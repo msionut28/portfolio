@@ -49,8 +49,8 @@ const About = () => {
             as well as <b>phpBB</b> and Invision Community(<b>IPS</b>).
             <br /> <br />
             Fast-forward a few years, in April 2023 I decided to start
-            self-teaching myself web-development, as the passion for coding and
-            web development never faded away. I decided to follow courses on
+            self-teaching myself JavaScript, as the passion for coding and web
+            development never faded away. I decided to follow courses on
             <span style={{ fontWeight: "bold", marginLeft: "0.3vw" }}>
               Codecademy
             </span>
@@ -58,10 +58,10 @@ const About = () => {
           </p>
         </div>
         <div className="beginnings-media">
-            <Image
-              img={"/about/first-line-of-code.png"}
-              text={"Hover to see my very first .html page"}
-            />
+          <Image
+            img={"/about/first-line-of-code.png"}
+            text={"Hover to see my very first .html page"}
+          />
         </div>
       </motion.div>
       <motion.div

@@ -28,10 +28,10 @@ const aboutMe = {
   },
 };
 
-const contactInfo= {
-  github: 'https://github.com/msionut28/',
-  linkedin: 'https://linkedin.com/'
-}
+const contactInfo = {
+  github: "https://github.com/msionut28/",
+  linkedin: "https://linkedin.com/",
+};
 
 const projects = {
   bs: {
@@ -209,4 +209,11 @@ const selectedTabSettings = {
     url: "https://squadsprintfe-production.up.railway.app",
   },
 };
-export { aboutMe, projects, skills, skillsAssessment, contactInfo, selectedTabSettings };
+export {
+  aboutMe,
+  projects,
+  skills,
+  skillsAssessment,
+  contactInfo,
+  selectedTabSettings,
+};
