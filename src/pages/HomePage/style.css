@@ -23,3 +23,38 @@
     margin-top: 3vh;
     font-weight: 600;
 }
+
+.avatar-pic {
+    margin-right: 7.5vw;
+}
+
+@media only screen and (max-width: 991px) {
+    
+    .personal-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        gap: 10vw;
+    }
+
+    .titleAndDesc {
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0vh;
+        text-align: center;
+        height: 100%;
+        margin: auto;
+    }
+
+    .typewriter {
+        margin-top: 5vh;
+    }
+
+    .avatar-pic {
+        margin: auto;
+     }
+}

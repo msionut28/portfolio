@@ -3,14 +3,16 @@ import About from "./pages/About/About"
 import Browser from "./pages/Browser/Browser";
 import Contact from "./pages/Contact/Contact";
 import HomePage from "./pages/HomePage/HomePage";
+import MobileNavBar from './components/MobileNavBar/MobileNavBar'
 import NavBar from "./components/NavBar/NavBar";
 import ProjectsSlider from "./pages/ProjectsSlider/ProjectsSlider";
 import Skills from "./pages/Skills/Skills";
 
 function App() {
+  const isDesktop = window.innerWidth > 991;
   return (
     <div className="App">
-      <NavBar />
+      {isDesktop ? <NavBar /> : <MobileNavBar />}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />

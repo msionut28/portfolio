@@ -6,9 +6,11 @@ import Avatar from "../../components/Avatar/Avatar";
 import "./style.css";
 
 const HomePage = () => {
+  const isDesktop = window.innerWidth > 991;
+
   return (
     <div id="homepage">
-      <SocialLinks />
+      {isDesktop && <SocialLinks />}
       <div className="personal-info">
         <div className="titleAndDesc">
           <motion.div
@@ -42,9 +44,11 @@ const HomePage = () => {
           </motion.div>
         </div>
         <motion.div
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1, x: -75 }}
-        transition={{ duration: 0.5, delay: 0.5 }}>
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="avatar-pic"
+          >
           <Avatar img={"/pic/profilepic.png"} />
         </motion.div>
       </div>

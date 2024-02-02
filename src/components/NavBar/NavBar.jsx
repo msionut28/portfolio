@@ -1,30 +1,21 @@
 import "./style.css";
 import { Link } from "react-router-dom";
+import { routes } from "../../data/routes";
 
 const NavBar = () => {
   return (
     <div className="navbar">
       <div className="link-btns">
-        <Link to="/" style={{ textDecoration: "none" }}>
-          <span className="bebas link-btn">HOME</span>
-        </Link>
-        <Link to="/about" style={{ textDecoration: "none" }}>
-          <span className="bebas link-btn">ABOUT</span>
-        </Link>
-        <Link to="/browser" style={{ textDecoration: "none" }}>
-          <span className="bebas link-btn">BROWSER</span>
-        </Link>
-        <Link to="/contact" style={{ textDecoration: "none" }}>
-          <span className="bebas link-btn">CONTACT</span>
-        </Link>
-        <Link to="/projects" style={{ textDecoration: "none" }}>
-          <span className="bebas link-btn" style={{ textDecoration: "none" }}>
-            PROJECTS
-          </span>
-        </Link>
-        <Link to="/skills" style={{ textDecoration: "none" }}>
-          <span className="bebas link-btn">SKILLS</span>
-        </Link>
+        {routes.map((route) => {
+          const {name, to} = route
+          return (
+            <Link to={to} style={{textDecoration: "none"}}>
+              <span className="bebas link-btn">
+                {name}
+              </span>
+            </Link>
+          )
+        })}
       </div>
     </div>
   );
