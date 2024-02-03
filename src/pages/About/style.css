@@ -45,6 +45,21 @@
   margin-left: 7vw;
 }
 
+@media only screen and (max-width: 991px) {
+  .introduction {
+    margin-left: 1vw;
+  }
+
+  .beginnings {
+    flex-direction: column;
+  }
+
+  .beginnings-text {
+    width: 90%;
+    margin-left: 1vw;
+  }
+}
+
 @keyframes wave {
   0% {
     transform: rotate(0deg);

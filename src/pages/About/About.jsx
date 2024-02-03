@@ -4,16 +4,16 @@ import SocialLinks from "../../components/SocialLinks/SocialLinks";
 import Image from "../../components/Image/Image";
 
 const About = () => {
+  const isDesktop = window.innerWidth > 991;
   return (
     <div className="about">
-      <SocialLinks />
+      {isDesktop && <SocialLinks />}
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
         className="introduction"
       >
-        {/* <h1 className="montserrat about-me-title custom-text-style">WHO AM I?</h1> */}
         <h1 className="montserrat title custom-text-style">
           Hi there! <span className="animated">👋</span> I'm Stelian-Ionut
           Molocea
@@ -58,10 +58,10 @@ const About = () => {
           </p>
         </div>
         <div className="beginnings-media">
-          <Image
+          {isDesktop && <Image
             img={"/about/first-line-of-code.png"}
             text={"Hover to see my very first .html page"}
-          />
+          /> }
         </div>
       </motion.div>
       <motion.div
