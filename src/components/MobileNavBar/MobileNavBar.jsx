@@ -4,7 +4,7 @@ import { useState, useRef } from "react";
 import { useClickAway } from "react-use";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { routes } from "../../data/routes";
+import { routes } from "data/routes";
 
 const MobileNavBar = () => {
   const [isOpen, setOpen] = useState(false);

@@ -14,8 +14,8 @@ import {
   Search,
   Monitor,
 } from "react-feather";
-import { getCurrentDateTime } from "../../hooks/dateGetter";
-import { selectedTabSettings } from "../../data/content";
+import { getCurrentDateTime } from "hooks/dateGetter";
+import { selectedTabSettings } from "data/content";
 import "./style.css";
 
 const Browser = () => {

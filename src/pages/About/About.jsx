@@ -1,8 +1,8 @@
 import "./style.css";
 import { motion } from "framer-motion";
-import AnimateWhenVisible from "../../components/AnimateWhenVisible/AnimateWhenVisible";
-import SocialLinks from "../../components/SocialLinks/SocialLinks";
-import Image from "../../components/Image/Image";
+import AnimateWhenVisible from "components/AnimateWhenVisible/AnimateWhenVisible";
+import SocialLinks from "components/SocialLinks/SocialLinks";
+import Image from "components/Image/Image";
 
 const About = () => {
   const isDesktop = window.innerWidth > 991;
@@ -23,6 +23,7 @@ const About = () => {
           I'm a passionate full stack web developer seeking opportunities to put
           my skills into practice.
         </h5>
+
       </motion.div>
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}

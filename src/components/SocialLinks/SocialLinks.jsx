@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import { contactInfo } from '../../data/content';
+import { contactInfo } from 'data/content';
 import './style.css'
 
 const SocialLinks = () => {

@@ -1,7 +1,7 @@
-import { skills, skillsAssessment } from "../../data/content";
 import { motion } from "framer-motion";
-import Skill from "../../components/Skill/Skill";
-import ProgressBar from "../../components/ProgressBar/ProgressBar";
+import { skills, skillsAssessment } from "data/content";
+import Skill from "components/Skill/Skill";
+import ProgressBar from "components/ProgressBar/ProgressBar";
 import "./style.css";
 
 const Skills = () => {

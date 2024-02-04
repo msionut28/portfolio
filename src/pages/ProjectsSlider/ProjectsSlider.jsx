@@ -1,10 +1,9 @@
 import { useRef, useState } from "react";
-import { motion } from "framer-motion";
-import AnimateWhenVisible from "../../components/AnimateWhenVisible/AnimateWhenVisible";
 import { ArrowRight } from "react-feather";
 import { ArrowLeft } from "react-feather";
-import { projects } from "../../data/content";
-import Project from "../../components/Project/Project";
+import { projects } from "data/content";
+import AnimateWhenVisible from "components/AnimateWhenVisible/AnimateWhenVisible";
+import Project from "components/Project/Project";
 import "./style.css";
 
 const ProjectsSlider = () => {
@@ -49,13 +48,9 @@ const ProjectsSlider = () => {
 
   return (
     <div className="container">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
-      >
+      <AnimateWhenVisible delay={0}>
         <h1 className="montserrat title">PROJECTS</h1>
-      </motion.div>
+      </AnimateWhenVisible>
       <div
         ref={containerRef}
         style={{
@@ -64,14 +59,9 @@ const ProjectsSlider = () => {
           scrollBehavior: "smooth",
         }}
       >
-        <div
-          className="content-box"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-        >
+        <div className="content-box">
           {projects.map((project, index) => {
-            const {title, shortDesc, image, live, git} = project;
+            const { title, shortDesc, image, live, git } = project;
             return (
               <AnimateWhenVisible delay={0.15} key={index}>
                 <Project
