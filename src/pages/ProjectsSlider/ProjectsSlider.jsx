@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import AnimateWhenVisible from "../../components/AnimateWhenVisible/AnimateWhenVisible";
 import { ArrowRight } from "react-feather";
 import { ArrowLeft } from "react-feather";
 import { projects } from "../../data/content";
@@ -48,7 +49,7 @@ const ProjectsSlider = () => {
 
   return (
     <div className="container">
-            <motion.div
+      <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
@@ -63,27 +64,29 @@ const ProjectsSlider = () => {
           scrollBehavior: "smooth",
         }}
       >
-        <motion.div
+        <div
           className="content-box"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
         >
-          {Object.keys(projects).map((key) => {
-            const project = projects[key];
+          {projects.map((project, index) => {
+            const {title, shortDesc, image, live, git} = project;
             return (
-              <div className="item" key={key}>
+              <AnimateWhenVisible delay={0.15} key={index}>
                 <Project
-                  title={project.title}
-                  shortDesc={project.shortDesc}
-                  image={project.image}
-                  web={project.live}
-                  git={project.git}
+                  title={title}
+                  shortDesc={shortDesc}
+                  image={image}
+                  web={live}
+                  git={git}
                 />
-              </div>
+              </AnimateWhenVisible>
+              // <div className="item" key={key}>
+              // </div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
 
       <div className="action-btns">

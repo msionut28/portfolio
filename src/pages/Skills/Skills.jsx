@@ -21,9 +21,12 @@ const Skills = () => {
         transition={{ duration: 1, delay: 0.25 }}
       >
         <div className="skills">
-          {Object.values(skills).map((skill, index) => (
-            <Skill key={index} name={skill.name} img={skill.img} />
-          ))}
+          {skills.map((skill, index) => {
+            const {name, img} = skill
+            return(
+              <Skill key={index} name={name} img={img} />
+            )
+            })}
         </div>
       </motion.div>
       <div className="skill-assess">

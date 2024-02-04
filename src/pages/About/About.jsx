@@ -1,5 +1,6 @@
 import "./style.css";
 import { motion } from "framer-motion";
+import AnimateWhenVisible from "../../components/AnimateWhenVisible/AnimateWhenVisible";
 import SocialLinks from "../../components/SocialLinks/SocialLinks";
 import Image from "../../components/Image/Image";
 
@@ -58,25 +59,29 @@ const About = () => {
           </p>
         </div>
         <div className="beginnings-media">
-          {isDesktop && <Image
-            img={"/about/first-line-of-code.png"}
-            text={"Hover to see my very first .html page"}
-          /> }
+          {isDesktop && (
+            <Image
+              img={"/about/first-line-of-code.png"}
+              text={"Hover to see my very first .html page"}
+            />
+          )}
         </div>
       </motion.div>
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
         className="further-education"
-      >
+      > */}
+      <AnimateWhenVisible delay={0.5}>
         <h3
           className="montserrat custom-text-style float-right"
           style={{ fontWeight: "bold", marginLeft: "55vw" }}
         >
           How it developed?
         </h3>
-      </motion.div>
+      </AnimateWhenVisible>
+      {/* </motion.div> */}
     </div>
   );
 };
