@@ -1,5 +1,10 @@
 import "./style.css";
 import { motion } from "framer-motion";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 import AnimateWhenVisible from "components/AnimateWhenVisible/AnimateWhenVisible";
 import SocialLinks from "components/SocialLinks/SocialLinks";
 import Image from "components/Image/Image";
@@ -23,8 +28,93 @@ const About = () => {
           I'm a passionate full stack web developer seeking opportunities to put
           my skills into practice.
         </h5>
-
       </motion.div>
+      <AnimateWhenVisible delay={1}>
+        <VerticalTimeline>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: "rgb(31, 34, 25)", color: "#fff" }}
+            contentArrowStyle={{ borderRight: "7px solid  rgb(50, 55, 45)" }}
+            date="January 2023 - present"
+            iconStyle={{ background: "rgb(50, 55, 45)", color: "#fff" }}
+          >
+            <h3 className="vertical-timeline-element-title bebas">Freelance</h3>
+            <h4 className="vertical-timeline-element-subtitle montserrat">
+              Iasi, Romania & London, UK
+            </h4>
+            <p className="montserrat">
+              Developing web apps, mainly relying on MERN stack/ Next.js +
+              MongoDB, while further enchancing my development knowledge by
+              learning TypeScript.
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: "rgb(31, 34, 25)", color: "#fff" }}
+            contentArrowStyle={{ borderRight: "7px solid  rgb(50, 55, 45)" }}
+            date="June 2023 - July 2023"
+            iconStyle={{ background: "rgb(50, 55, 45)", color: "#fff" }}
+          >
+            <h3 className="vertical-timeline-element-title bebas">
+              Software Engineering Immersive
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle montserrat">
+              General Assembly - London, UK
+            </h4>
+            <p className="montserrat">
+              I completed a 12-week full-stack coding bootcamp, totaling 420
+              hours of instruction. During this period, I gained proficiency in
+              HTML5, CSS, JavaScript, and Python. We delved into frontend
+              frameworks such as React.js, Next.js, and Vue.js, and on the
+              backend, we explored Node.js, Express, and Django. These
+              technologies were not only discussed theoretically but also
+              actively utilized in the unit projects we had to deliver.
+              Moreover, I integrated a non-relational database, MongoDB, into
+              some of my projects, while others required the use of a relational
+              database—PostgreSQL. API consumption was a constant requirement
+              throughout all the projects.
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: "rgb(31, 34, 25)", color: "#fff" }}
+            contentArrowStyle={{ borderRight: "7px solid  rgb(50, 55, 45)" }}
+            date="September 2023 - December 2023"
+            iconStyle={{ background: "rgb(50, 55, 45)", color: "#fff" }}
+          >
+            <h3 className="vertical-timeline-element-title bebas">
+              JavaScript - The Complete Guide(Beginner + Friendly)
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle montserrat">
+              Udemy
+            </h4>
+            <p className="montserrat">
+              68hrs of lessons, teaching fundamentals of JavaScript, mainly
+              focused on DOM Manipulation, Object Oriented Programming, ASYNC
+              JavaScript - Async/Await, promises.
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: "rgb(31, 34, 25)", color: "#fff" }}
+            contentArrowStyle={{ borderRight: "7px solid  rgb(50, 55, 45)" }}
+            date="March 2023 - May 2023"
+            iconStyle={{ background: "rgb(50, 55, 45)", color: "#fff" }}
+          >
+            <h3 className="vertical-timeline-element-title bebas">
+              Career Path - Full-Stack Engineer
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle montserrat">
+              Codecademy
+            </h4>
+            <p className="montserrat">
+              150hrs of beginner friendly lessons, teaching fundamentals of
+              HTML, CSS, JS and DevOps, slowly shifting towards topics such as
+              React, Git & GitHub, Express.js, PostgreSQL, REST APIs.
+            </p>
+          </VerticalTimelineElement>
+        </VerticalTimeline>
+      </AnimateWhenVisible>
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -40,23 +130,26 @@ const About = () => {
           </h3>
           <p className="montserrat passion custom-text-style">
             <br />
-            I have always found myself intrigued by coding and how computers
-            work, but mainly fascinated about Web, how things rendered and were
-            displayed to us.
+            I've always been fascinated by coding, especially the intricate
+            workings of computers and the captivating world of the web – how
+            things get rendered and displayed to us.
             <br /> <br />
-            My very first contact with coding was quite a few years ago, when I
-            decided to dive in head first in this subject, mainly relying on
-            web-packs and internet tutorials to build the things that I wanted.
-            Back then, I used to build blogs and forums using <b>WordPress</b>,
-            as well as <b>phpBB</b> and Invision Community(<b>IPS</b>).
+            My first foray into coding happened several years ago. I took the
+            plunge headfirst, relying on web-packs and internet tutorials to
+            bring my ideas to life. During this time, I built blogs and forums
+            using <b>WordPress</b>, along with platforms like <b>phpBB</b> and
+            Invision Community (<b>IPS</b>).
             <br /> <br />
-            Fast-forward a few years, in April 2023 I decided to start
-            self-teaching myself JavaScript, as the passion for coding and web
-            development never faded away. I decided to follow courses on
+            Fast forward to March 2023, and my passion for coding and web
+            development remained as strong as ever. I embarked on a
+            self-teaching journey with JavaScript. I started with courses on{" "}
             <span style={{ fontWeight: "bold", marginLeft: "0.3vw" }}>
               Codecademy
-            </span>
-            , slowly moving towards <b>Udemy</b> courses.
+            </span>{" "}
+            and gradually transitioned to <b>Udemy</b> courses. Following this,
+            I took a deep dive into the world of software engineering with an
+            immersive bootcamp at <b>General Assembly</b>, cementing my skills and
+            knowledge in the field.
           </p>
         </div>
         <div className="beginnings-media">
@@ -74,14 +167,14 @@ const About = () => {
         transition={{ duration: 0.5, delay: 0.5 }}
         className="further-education"
       > */}
-      <AnimateWhenVisible delay={0.5}>
+      {/* <AnimateWhenVisible delay={0.5}>
         <h3
           className="montserrat custom-text-style float-right"
           style={{ fontWeight: "bold", marginLeft: "55vw" }}
         >
           How it developed?
         </h3>
-      </AnimateWhenVisible>
+      </AnimateWhenVisible> */}
       {/* </motion.div> */}
     </div>
   );
