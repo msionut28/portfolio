@@ -30,7 +30,7 @@ const aboutMe = {
 
 const contactInfo = {
   github: "https://github.com/msionut28/",
-  linkedin: "https://linkedin.com/",
+  linkedin: "https://www.linkedin.com/in/msionut28/",
 };
 
 const projects = [
