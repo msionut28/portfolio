@@ -1,1 +1,1 @@
-# Personal Portfolio - React.js / CSS / Framer Motion
+# Personal Portfolio - React.js / CSS / Bootstrap/ Framer Motion

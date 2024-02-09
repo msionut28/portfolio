@@ -108,6 +108,7 @@ const Contact = () => {
                   <div className="row mb-5">
                     <div className="col-lg-6 form-group mb-2">
                       <input
+                        autoComplete="off"
                         type="text"
                         className="text-input montserrat"
                         id="name"
@@ -120,6 +121,7 @@ const Contact = () => {
                     </div>
                     <div className="col-lg-6 form-group">
                       <input
+                        autoComplete="off"
                         type="email"
                         className="text-input montserrat"
                         id="email"
@@ -132,6 +134,7 @@ const Contact = () => {
                     </div>
                   </div>
                   <textarea
+                    autoComplete="off"
                     type="text"
                     className="textarea-input montserrat"
                     id="message"
