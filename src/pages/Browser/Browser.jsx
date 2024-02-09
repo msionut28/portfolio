@@ -16,6 +16,7 @@ import {
 } from "react-feather";
 import { getCurrentDateTime } from "lib/dateGetter";
 import { selectedTabSettings } from "data/content";
+import SocialLinks from "components/SocialLinks/SocialLinks";
 import "./style.css";
 
 const Browser = () => {
@@ -40,6 +41,7 @@ const Browser = () => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
     >
+      <SocialLinks/>
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}

@@ -31,7 +31,8 @@ const About = () => {
       </motion.div>
       <AnimateWhenVisible delay={1}>
         <div className="timeline">
-          <VerticalTimeline>
+          <VerticalTimeline
+          className="custom-text-style">
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               contentStyle={{ background: "rgb(36, 39, 30)", color: "#fff" }}

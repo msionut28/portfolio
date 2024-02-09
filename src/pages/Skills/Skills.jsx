@@ -2,11 +2,13 @@ import { motion } from "framer-motion";
 import { skills, skillsAssessment } from "data/content";
 import Skill from "components/Skill/Skill";
 import ProgressBar from "components/ProgressBar/ProgressBar";
+import SocialLinks from "components/SocialLinks/SocialLinks";
 import "./style.css";
 
 const Skills = () => {
   return (
     <div className="test">
+      <SocialLinks/>
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}

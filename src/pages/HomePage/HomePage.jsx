@@ -11,7 +11,7 @@ const HomePage = () => {
   return (
     <div id="homepage">
       {isDesktop && (
-          <SocialLinks delay={0.5} />
+          <SocialLinks/>
       )}
       <div className="personal-info">
         <div className="titleAndDesc">
