@@ -31,8 +31,7 @@ const About = () => {
       </motion.div>
       <AnimateWhenVisible delay={1}>
         <div className="timeline">
-          <VerticalTimeline
-          className="custom-text-style">
+          <VerticalTimeline className="custom-text-style">
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               contentStyle={{ background: "rgb(36, 39, 30)", color: "#fff" }}
@@ -120,16 +119,11 @@ const About = () => {
           </VerticalTimeline>
         </div>
       </AnimateWhenVisible>
-      <AnimateWhenVisible>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.75, delay: 0.75 }}
-          className="beginnings"
-        >
+      <AnimateWhenVisible delay={0.25}>
+        <div className="beginnings">
           <div className="beginnings-text">
             <h3
-              className="montserrat custom-text-style"
+              className="montserrat title custom-text-style"
               style={{ fontWeight: "bold" }}
             >
               How it all started?
@@ -166,23 +160,31 @@ const About = () => {
               />
             )}
           </div>
-        </motion.div>
+        </div>
       </AnimateWhenVisible>
-      {/* <motion.div
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
-        className="further-education"
-      > */}
-      {/* <AnimateWhenVisible delay={0.5}>
-        <h3
-          className="montserrat custom-text-style float-right"
-          style={{ fontWeight: "bold", marginLeft: "55vw" }}
-        >
-          How it developed?
-        </h3>
+      {/* <AnimateWhenVisible delay={0.25}>
+        <div className="further-education">
+          <div className="ga-media">
+          {isDesktop && (
+              <Image
+                img={"/about/first-line-of-code.png"}
+                text={"Hover to see my very first .html page"}
+              />
+            )}
+          </div>
+          <div className="ga">
+          <h3 className="montserrat title" style={{ fontWeight: "bold" }}>
+            How it developed?
+          </h3>
+            <p className="montserrat passion custom-text-style">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio
+              mollitia debitis ad iure quidem ipsum nam voluptatibus obcaecati
+              nemo aliquam fuga, eaque excepturi. Aut, eligendi. Culpa aliquid
+              incidunt doloribus quae.
+            </p>
+          </div>
+        </div>
       </AnimateWhenVisible> */}
-      {/* </motion.div> */}
     </div>
   );
 };

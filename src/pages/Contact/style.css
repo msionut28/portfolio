@@ -50,4 +50,5 @@
 .text-input::placeholder, .textarea-input::placeholder {
     color: rgba(255, 255, 255, 0.45);
     text-align: center;
+    font-weight: 600;
 }

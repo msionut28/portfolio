@@ -37,7 +37,6 @@ const Contact = () => {
             alert:
               "Your Email has successfully been sent! Will get in touch as soon as possible!",
           });
-          console.log(form);
         },
         (error) => {
           console.log(error);
@@ -69,8 +68,6 @@ const Contact = () => {
         </div>
       </AnimateWhenVisible>
       <div className="container">
-        {/* <div className="container"> */}
-
         <div className="row mb-5 mt-3 pt-md-3">
           <AnimateWhenVisible delay={0.75}>
             <div className="col-lg-8">
@@ -85,20 +82,22 @@ const Contact = () => {
               </div>
               <div className="col-lg-5 mb-5">
                 <address>
-                  <strong className="montserrat">Email:</strong>
+                  <span style={{ marginRight: "1vh" }}>
+                    <strong className="montserrat">Email:</strong>
+                  </span>
                   <a
                     className="montserrat"
                     href="mailto:moloceaionutt@gmail.com"
+                    style={{fontWeight: "500"}}
                   >
                     moloceaionutt@gmail.com
                   </a>
                 </address>
-                <p className="montserrat">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Maiores mollitia nulla perspiciatis asperiores placeat fugiat
-                  aut illum provident explicabo adipisci inventore, alias
-                  nesciunt. Veritatis vero, voluptas commodi nisi quod
-                  necessitatibus.
+                <p className="montserrat" style={{ fontWeight: "500" }}>
+                  I'm always open to new opportunities, collaborations, and
+                  exciting projects. Feel free to explore my portfolio and get
+                  in touch if you have a project in mind or just want to
+                  connect.
                 </p>
               </div>
               <div className="col-lg-7 d-flex align-items-center">
@@ -139,15 +138,19 @@ const Contact = () => {
                     name="message"
                     rows="5"
                     value={form.message}
-                    placeholder="What's on your mind?"
+                    placeholder="Share your thoughts with me..."
                     onChange={handleChange}
                     required
                   />
                   <br />
                   <div className="row d-flex">
                     <div className="col-lg-12 form-group">
-                      <button type="submit" className="montserrat customBtn">
-                        SEND
+                      <button
+                        type="submit"
+                        className="montserrat customBtn"
+                        style={{ fontWeight: "500" }}
+                      >
+                        {form.sending ? "SENDING..." : "SEND"}
                       </button>
                     </div>
                   </div>
