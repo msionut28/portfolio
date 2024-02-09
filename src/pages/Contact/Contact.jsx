@@ -113,7 +113,7 @@ const Contact = () => {
                         id="name"
                         name="name"
                         value={form.name}
-                        placeholder="What should I call you?"
+                        placeholder="How should I call you?"
                         onChange={handleChange}
                         required
                       />
